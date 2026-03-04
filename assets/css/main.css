@@ -145,6 +145,7 @@
     của opacity và transform */
     will-change: opacity, transform;
     display: none;
+    z-index: 1000;
 }
 
 .header__notify::before {
@@ -315,7 +316,7 @@ search-history phía sau thẻ input */
 .header__search-history {
     position: absolute;
     left: 0;
-    top: calc(100% + 2px);
+    top: calc(100% + 7px);
     width: calc(100% - 16px);
     background-color: var(--white-color);
     border-radius: 3px;
@@ -355,6 +356,8 @@ search-history phía sau thẻ input */
     font-size: 1.4rem;
     line-height: 38px;
     color: var(--text-color);
+    /* Để nó bao phủ hết toàn bộ box chứa nó  */
+    display: block;
 }
 
 .header__search-select-seperate {
@@ -469,14 +472,65 @@ search-history phía sau thẻ input */
     color: var(--white-color);
 }
 
+/* Cart */
 .header__cart {
     width: 150px;
     text-align: center;
 }
 
+.header__cart-wrap {
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.header__cart-wrap:hover .header__cart-list {
+    display: block;
+    animation: fadeIn ease-in 0.2s;
+}
+
 .header__cart-icon {
     color: var(--white-color);
     font-size: 2.4rem;
+}
+
+.header__cart-list {
+    position: absolute;
+    top: calc(100% + 15px);
+        right: -5%;
+    width: 400px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+    padding: 24px 0;
+    /* display: none; */
+}
+
+.header__cart-list::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -30px;
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__cart-list-no-cart {
+
+}
+
+.header__cart-no-cart-img {
+    width: 50%;
+}
+
+.header__cart-list-no-cart-msg {
+    display: block;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    margin-top: 14px;
+    color: var(--text-color);
 }
 
 /* Modal Layout */
