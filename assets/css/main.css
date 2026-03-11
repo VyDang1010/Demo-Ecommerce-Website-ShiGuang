@@ -424,6 +424,7 @@ search-history phía sau thẻ input */
     border-radius: 3px;
     box-shadow: 0 1px 5px #bdbdbd;
     display: none;
+    z-index: 1;
 }
 
 .header__search-history-heading {
@@ -621,6 +622,7 @@ search-history phía sau thẻ input */
     /* padding: 24px 0; */
     cursor: default;
     display: none;
+    z-index: 1;
 }
 
 .header__cart-list::after {
@@ -996,3 +998,83 @@ search-history phía sau thẻ input */
 }
 
 /* Home sort + filter  */
+.home-filter {  
+    display: flex;
+    padding: 12px 22px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.04);
+    align-items: center;
+}
+
+.home-filter__label {
+    font-size: 1.4rem;
+    color: #555555;
+    margin-right: 16px;
+}
+
+.select-input__item {
+
+}
+
+.home-filter__btn {
+    min-width: 90px;
+    margin-right: 12px;
+}
+
+.home-filter__page {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.home-filter__page {
+
+}
+
+.home-filter__page-num {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+
+.home-filter__page-current {
+    color: var(--primary-color);
+}
+
+.home-filter__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 72px;
+    height: 36px;
+}
+
+.home-filter__page-btn {
+    flex: 1;
+    display: flex;
+    text-decoration: none;
+    background-color: var(--white-color);
+}
+
+.home-filter__page-btn:first-child {
+    border-right: 1px solid #eee;
+}
+
+.home-filter__page-btn--disabled {
+    cursor: default;
+    background-color: #f9f9f9;
+}
+
+.home-filter__page-btn--disabled .home-filter__page-icon {
+    color: #ccc;
+}
+
+.home-filter__page-icon {
+    margin: auto;
+    font-size: 1.4rem;
+    color: #555555;
+}
